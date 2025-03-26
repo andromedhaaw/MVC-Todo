@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Batch 12\\AspNetCoreTodo\\AspNetCoreTodo.csproj": {}
+    "D:\\bc formulatrix\\mvc todo\\MVC-Todo\\AspNetCoreTodo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Batch 12\\AspNetCoreTodo\\AspNetCoreTodo.csproj": {
+    "D:\\bc formulatrix\\mvc todo\\MVC-Todo\\AspNetCoreTodo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Batch 12\\AspNetCoreTodo\\AspNetCoreTodo.csproj",
+        "projectUniqueName": "D:\\bc formulatrix\\mvc todo\\MVC-Todo\\AspNetCoreTodo.csproj",
         "projectName": "AspNetCoreTodo",
-        "projectPath": "C:\\Users\\Batch 12\\AspNetCoreTodo\\AspNetCoreTodo.csproj",
-        "packagesPath": "C:\\Users\\Batch 12\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Batch 12\\AspNetCoreTodo\\obj\\",
+        "projectPath": "D:\\bc formulatrix\\mvc todo\\MVC-Todo\\AspNetCoreTodo.csproj",
+        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
+        "outputPath": "D:\\bc formulatrix\\mvc todo\\MVC-Todo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Batch 12\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -43,6 +43,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
             "Humanizer": {
               "target": "Package",
               "version": "[2.14.1, )"
