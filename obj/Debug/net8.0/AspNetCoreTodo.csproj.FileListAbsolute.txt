@@ -190,6 +190,7 @@ C:\Users\Batch 12\AspNetCoreTodo\obj\Debug\net8.0\AspNetCoreTodo.MvcApplicationP
 C:\Users\Batch 12\AspNetCoreTodo\obj\Debug\net8.0\AspNetCoreTodo.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Batch 12\AspNetCoreTodo\obj\Debug\net8.0\AspNetCoreTodo.RazorAssemblyInfo.cache
 C:\Users\Batch 12\AspNetCoreTodo\obj\Debug\net8.0\AspNetCoreTodo.RazorAssemblyInfo.cs
+C:\Users\Batch 12\AspNetCoreTodo\obj\Debug\net8.0\AspNetCoreTodo.sourcelink.json
 C:\Users\Batch 12\AspNetCoreTodo\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Batch 12\AspNetCoreTodo\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Batch 12\AspNetCoreTodo\obj\Debug\net8.0\staticwebassets\msbuild.AspNetCoreTodo.Microsoft.AspNetCore.StaticWebAssets.props
