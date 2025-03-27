@@ -1,11 +1,14 @@
 @model TodoViewModel
 @using Humanizer
+
 @{
     ViewData["Title"] = "Manage your todo list";
 }
-<div class="panel	panel-default	todo-panel">
+
+<div class="panel panel-default todo-panel">
     <div class="panel-heading">@ViewData["Title"]</div>
-    <table class="table	table-hover">
+
+    <table class="table table-hover">
         <thead>
             <tr>
                 <td>&#x2714;</td>
@@ -13,6 +16,7 @@
                 <td>Due</td>
             </tr>
         </thead>
+
         @foreach (var item in Model.Items)
         {
             <tr>
@@ -21,14 +25,21 @@
                         <input type="checkbox" class="done-checkbox">
                         <input type="hidden" name="id" value="@item.Id">
                     </form>
-
                 </td>
                 <td>@item.Title</td>
                 <td>@item.DueAt.Humanize()</td>
+                <td>
+                    <form asp-action="DeleteItem" method="POST" style="display:inline;">
+                        <input type="hidden" name="id" value="@item.Id">
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </td>
             </tr>
         }
+
     </table>
-    <div class="panel-footer	add-item-form">
-        @await Html.PartialAsync("AddItemPartial", new TodoItem())
+
+    <div class="panel-footer add-item-form">
+        @await Html.PartialAsync("AddItemPartial", new TodoItem { Title = "" })
     </div>
 </div>

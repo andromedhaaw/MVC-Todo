@@ -1,7 +1,11 @@
+using AspNetCoreTodo.DTOs;
+
 namespace AspNetCoreTodo.Models
 {
     public class TodoViewModel
     {
-        public TodoItem[] Items { get; set; }
+        
+        public List<TodoItemDTO> Items { get; set; }
+        
     }
 }
