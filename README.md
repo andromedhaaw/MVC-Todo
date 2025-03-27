@@ -1,6 +1,4 @@
-Here’s a README for your MVC-Todo project using ASP.NET Core with SQLite:
 
----
 
 # MVC-Todo Application
 
