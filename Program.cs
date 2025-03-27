@@ -2,8 +2,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using AspNetCoreTodo.Data;
+using FluentValidation.AspNetCore;
 using AspNetCoreTodo.Repository;
 using AspNetCoreTodo.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +17,9 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews()
+    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<TodoItemValidator>());
+
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddScoped<ITodoItemRepository, TodoItemRepository>();
 

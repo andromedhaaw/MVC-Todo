@@ -7057,11 +7057,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Batch 12\\AspNetCoreTodo\\AspNetCoreTodo.csproj",
+      "projectUniqueName": "C:\\Users\\Batch 12\\Documents\\mvctodo1\\MVC-Todo\\AspNetCoreTodo.csproj",
       "projectName": "AspNetCoreTodo",
-      "projectPath": "C:\\Users\\Batch 12\\AspNetCoreTodo\\AspNetCoreTodo.csproj",
+      "projectPath": "C:\\Users\\Batch 12\\Documents\\mvctodo1\\MVC-Todo\\AspNetCoreTodo.csproj",
       "packagesPath": "C:\\Users\\Batch 12\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Batch 12\\AspNetCoreTodo\\obj\\",
+      "outputPath": "C:\\Users\\Batch 12\\Documents\\mvctodo1\\MVC-Todo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Batch 12\\AppData\\Roaming\\NuGet\\NuGet.Config"

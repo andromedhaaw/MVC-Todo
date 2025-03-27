@@ -9,6 +9,7 @@ using AspNetCoreTodo.DTOs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using AutoMapper;
+using FluentValidation.Results;
 
 namespace AspNetCoreTodo.Controllers
 {
@@ -26,6 +27,7 @@ namespace AspNetCoreTodo.Controllers
             _mapper = mapper;
         }
 
+        // Index method to display incomplete to-do items
         public async Task<IActionResult> Index()
         {
             var currentUser = await _userManager.GetUserAsync(User);
@@ -44,21 +46,22 @@ namespace AspNetCoreTodo.Controllers
             return View(model);
         }
 
+        // AddItem method to add a new to-do item
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddItem(TodoCreateDTO newItem)
         {
             var currentUser = await _userManager.GetUserAsync(User);
             if (currentUser == null) return Challenge();
 
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid) // Check for validation errors
             {
                 var items = await _todoItemService.GetIncompleteItemAsync(currentUser);
                 var itemsDTO = _mapper.Map<List<TodoItemDTO>>(items);
-                var model = new TodoViewModel { Items = itemsDTO };
-                return View("Index", model);
+                var model = new TodoViewModel { Items = itemsDTO, NewItem = newItem }; // Pass NewItem back to the view
+                return View("Index", model); // Return the view with validation errors
             }
 
-            var todoItem = _mapper.Map<TodoItem>(newItem); // Map DTO to model
+            var todoItem = _mapper.Map<TodoItem>(newItem); // Map the DTO to the model
             var successful = await _todoItemService.AddItemAsync(todoItem, currentUser);
 
             if (!successful)
@@ -69,6 +72,7 @@ namespace AspNetCoreTodo.Controllers
             return RedirectToAction("Index");
         }
 
+        // Mark item as done
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> MarkDone(Guid id)
         {
@@ -90,6 +94,7 @@ namespace AspNetCoreTodo.Controllers
             return RedirectToAction("Index");
         }
 
+        // Delete item
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteItem(Guid id)

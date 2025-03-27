@@ -6,6 +6,7 @@ namespace AspNetCoreTodo.Models
     {
         
         public List<TodoItemDTO> Items { get; set; }
+        public TodoCreateDTO NewItem { get; set; }
         
     }
 }

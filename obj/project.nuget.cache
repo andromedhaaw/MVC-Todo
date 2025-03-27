@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qd75rJ7DDrI=",
+  "dgSpecHash": "tUg87Z3J5do=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Batch 12\\AspNetCoreTodo\\AspNetCoreTodo.csproj",
+  "projectFilePath": "C:\\Users\\Batch 12\\Documents\\mvctodo1\\MVC-Todo\\AspNetCoreTodo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Batch 12\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Batch 12\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
